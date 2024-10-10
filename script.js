@@ -10,28 +10,28 @@ document.getElementById("search-form").addEventListener("submit", function (e) {
         clearTimeout(debounceTimer);  // pulire il timer
     }  
     debounceTimer = setTimeout(() => {
-    currentPage = 1;
-    visiblePageStart = 1;
-    const query = document.getElementById("search-input").value.trim();
-    const type = document.getElementById("search-type").value;
+        currentPage = 1;
+        visiblePageStart = 1;
+        const query = document.getElementById("search-input").value.trim();
+        const type = document.getElementById("search-type").value;
 
-    // Validazione minima
-    if (query.length < 3) {
-        alert("Non esiste una repo con il nome che è stato cercato");
-        document.querySelector(".spinner-5").classList.add(`d-none`);
-        document.querySelector("nav").style.display = "block";
-        document.querySelector(".pagi").style.display = "block";
+        // Validazione minima
+        if (query.length < 3) {
+            alert("Non esiste una repo con il nome che è stato cercato");
+            document.querySelector(".spinner-5").classList.add(`d-none`);
+            document.querySelector("nav").style.display = "block";
+            document.querySelector(".pagi").style.display = "none";
+            
+            document.getElementById("search-input").value = "";
+            document.getElementById("search-type").value ="seleziona"; 
         
-        document.getElementById("search-input").value = "";
-        const type = document.getElementById("search-type").value; 
-    
-        document.getElementById("search-input").focus();
-        return;
-    }
+            document.getElementById("search-input").focus();
+            return;
+        }
 
-    // fare la chiamata del API
-    searchGitHub(query, type, currentPage);
-}, 700);
+        // fare la chiamata del API
+        searchGitHub(query, type, currentPage);
+    }, 700);
 
 // il loader
 document.querySelector(".spinner-5").classList.remove(`d-none`);
