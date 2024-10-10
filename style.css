@@ -1,0 +1,78 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 20px;
+}
+
+.grid-item {
+     background-color: #f0f0f0;
+     padding: 20px;
+     text-align: center;
+     border: 1px solid #ddd;
+}
+.lalo{
+    display: flex;
+    justify-content: center;
+}
+
+.circle{
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 15%;
+    object-fit: cover;
+    background-color: white;
+}
+.card-git{
+    position: relative;
+}
+
+.card-h {
+    background-color: #1e3a8a;
+    height: 8rem;
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0 100%);
+}
+.card-b{
+    padding-top: 2rem;
+    padding: 3rem 1rem 1rem 1rem;
+}
+.mare{
+    margin-top: auto;
+}
+.rosa{
+    background-color: #ff8495;
+}
+.verde{
+    background-color: #2ca589;
+}
+
+.spinner-5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    scale: 0.6;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    padding: 1.1px;
+    background: conic-gradient(#0000 10%, #8f44fd) content-box;
+    -webkit-mask: repeating-conic-gradient(#0000 0deg,
+            #000 1deg 20deg,
+            #0000 21deg 36deg),
+        radial-gradient(farthest-side,
+            #0000 calc(100% - 9px),
+            #000 calc(100% - 9px));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation: spinner-d55elj 1s infinite steps(10);
+}
+
+@keyframes spinner-d55elj {
+    to {
+        transform: rotate(1turn);
+    }
+}
