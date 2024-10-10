@@ -1,4 +1,4 @@
-
+/* card */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -15,6 +15,7 @@
 .lalo{
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .circle{
@@ -23,7 +24,7 @@
     border-radius: 50%;
     aspect-ratio: 1/1;
     position: absolute;
-    top: 15%;
+    bottom: -20px;
     object-fit: cover;
     background-color: white;
 }
@@ -50,6 +51,7 @@
     background-color: #2ca589;
 }
 
+/* loader */
 .spinner-5 {
     position: absolute;
     top: 50%;
